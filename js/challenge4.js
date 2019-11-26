@@ -1,28 +1,25 @@
-$("form").submit(function(onsubmit){
+ch4form.onsubmit = function() {
     var validInput = true;
-    var name = $("#fullname");
-    var address = $("#streetaddr");
+    var name = $("#fullname")
+    var address = $("#streetaddr")
     console.log("Here");
-    console.log(name)
-    if ((name.val().length) == 0){
-        $("#nameerrormsg").css("display", "block"); 
+    console.log(name);
+    console.log(address)
+    if (name.val().length == 0){
+        $("#nameerrormsg").css("display", 'block');
         validInput = false;
-        console.log(validInput);
     }
     else {
-        $("#nameerrormsg").css("display", "none");
-        console.log(validInput);
+        $("#nameerrormsg").css("display", 'none');
     }
 
-    if ((address.val().length) == 0){
-        $("#addrerrormsg").css("display", "block"); 
+    if (address.val().length == 0){
+        $("#addrerrormsg").css("display", 'block');
         validInput = false;
-        console.log(validInput);
     }
     else {
-        $("#addrerrormsg").css("display", "none"); 
-        console.log(validInput);
+        $("#addrerrormsg").css("display", 'none');
     }
 
     return validInput;
-});
+}
