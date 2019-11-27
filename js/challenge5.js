@@ -1,8 +1,9 @@
   
 console.log("here");
+var imgs =$("img");
 var msg = "Hover over an image below.";
-$('img').each(function(){
-	$(this).mouseenter(function(){
+imgs.each(function(){
+	$(this).on("mousemove",function(){
 		$("#image").css("backgroundImage","url('"+$(this).attr('src')+"')");
 		$("#image").html($(this).attr('alt'));
 	});
