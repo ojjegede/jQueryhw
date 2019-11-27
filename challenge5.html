@@ -82,35 +82,7 @@
 			src = "images/Photo From Olajide Jegede.jpg">
 
 	<script src = "js/challenge5.js"></script>
-	<script>
-	console.log("here");
-	var imgs = $(".preview");
-	var msg = "Hover over an image below";
-	for (let i = 0; i < imgs.length; i++) {
-			$(imgs[i]).mouseover(function() {
-					console.log("over");
-					console.log(imgs);
-					$("#image").css("backgroundImage", "url('"+imgs[i].src+"')");
-					$("#image").html(imgs[i].alt);
-			})
-			$(imgs[i]).focus(function() {
-					console.log("focus")
-					$("#image").css("backgroundImage", "url('"+imgs[i].src+"')");
-					$("#image").html(imgs[i].alt);
-			})
-			$(imgs[i]).mouseout(function() {
-					console.log("out");
-					$("#image").css("backgroundImage", "url('')");
-					$("#image").html(msg);
-			})
-			$(imgs[i]).blur(function() {
-					console.log("blur");
-					$("#image").css("backgroundImage", "url('')");
-					$("#image").html(msg);
-			})
-	}
-	</script>
-
+	
 
 </body>
 </html>
